@@ -1,0 +1,4 @@
+n01440764,shoes
+n01443537,dresses
+n01484850,bags
+n01491361,tops
