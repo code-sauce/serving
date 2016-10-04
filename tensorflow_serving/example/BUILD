@@ -68,9 +68,33 @@ py_binary(
 )
 
 py_binary(
+    name = "sr_export",
+    srcs = [
+        "sr_export.py",
+    ],
+    deps = [
+        "@inception_model//inception",
+        "@org_tensorflow//tensorflow:tensorflow_py",
+        "@org_tensorflow//tensorflow/contrib/session_bundle:exporter",
+    ],
+)
+
+py_binary(
     name = "inception_client",
     srcs = [
         "inception_client.py",
+    ],
+    deps = [
+        "//tensorflow_serving/apis:predict_proto_py_pb2",
+        "//tensorflow_serving/apis:prediction_service_proto_py_pb2",
+        "@org_tensorflow//tensorflow:tensorflow_py",
+    ],
+)
+
+py_binary(
+    name = "sr_client",
+    srcs = [
+        "sr_client.py",
     ],
     deps = [
         "//tensorflow_serving/apis:predict_proto_py_pb2",

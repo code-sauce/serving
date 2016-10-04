@@ -1,0 +1,5 @@
+gevent==1.0.1
+grpcio==0.3.post19
+bottle==0.12.7
+PIL==1.1.6
+solrpy==0.9.7
